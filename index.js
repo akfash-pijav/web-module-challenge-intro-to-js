@@ -19,6 +19,10 @@ Do the following:
 
    HINT: no function required
 */
+let votingAge = 21;
+if (votingAge >=18){
+  console.log('True');
+}
 
 
 
@@ -34,7 +38,13 @@ Do the following:
    HINT: no function required
 */
 
-
+let firstThing = ('Oranges');
+let secondThing = ('Pears');
+if ('Oranges'!='Pears')
+{
+  firstThing='Pineapple';
+  console.log(firstThing);
+}
 
 
 
@@ -49,6 +59,9 @@ Do the following:
    HINT: look up the Number method
 */
 
+const number = '1999';
+console.log(parseInt(number));
+
 
 
 
@@ -61,8 +74,11 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-  /*add your code here*/
+
+function multiply(a, b){
+  return a * b;
+  product = a*b;
+  return product;
 }
 
 
@@ -77,8 +93,10 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+function dogYears(humanYears)
+{
+  return humanYears * 7;
+dogYears()
 }
 
 
@@ -129,9 +147,34 @@ NOTE 2: This is a great time to check the tests to see what it expects, versus w
         So, on this one test, the weight would be 4 pounds, and the age would be 1 years old. It's expecting your function to return a decimal number of 0.2
 */  
 
-function hungryDog(/*add your code here*/){
-  /*add your code here*/
+function hungryDog(dogWeight, dogAge){
+
+  if (dogAge === 1 && dogWeight <=5){
+    return weight * 0.05;
+  }
+  else if (dogAge === 1 && dogWeight >= 6 && dogWeight <=10)
+  {
+    return dogWeight * 0.04;
+  }
+  else if (dogAge === 1 && dogWeight >= 11 && dogWeight <=15){
+    return dogWeight * 0.03;
+  }
+  else if (dogAge === 1 && dogWeight > 15){
+    return dogWeight * 0.02;
+  }
+
+  if (dogAge >=0.16 && dogAge <=0.33){
+    return dogWeight * 0.1;
+
+  }
+  else if (dogAge => 0.33 && dogAge <=0.58){
+    return dogWeight * 0.05;
+  }
+  else if (dogAge>= 0.58 && dogAge <=1){
+    return dogWeight * 0.04;
+  }
 }
+console.log(hungryDog(2));
 
 
 
@@ -156,11 +199,8 @@ Use the game function below to do the following:
 RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors | Or there's a tie
 */
 
-function game(user, computer){
-  /*add your code here*/
-}
-
-
+  function game()
+{}
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -173,8 +213,9 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-  /*add your code here*/
+function miles(km){
+  return km * 0.621371
+  miles(10)
 }
 
 
@@ -187,8 +228,9 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-  /*add your code here*/
+function feet(cm){
+  return cm / 30.48
+  feet()
 }
 
 
@@ -227,10 +269,25 @@ Using the grade function below do the following:
  below should return 'you got an F'
 */
 
-function grade(/*Your Code here */){
-/*Your Code here */
-}
-
+function grade(subjectScore){
+  if (subjectScore = 100 && subjectScore >= 90){
+  return 'you got an A';
+  }
+  
+  else if (subjectScore = 89 && subjectScore >=80){
+  return 'you got a B';
+  }
+  else if (subjectScore = 79 && subjectScore >=70){
+  return 'you got a C';
+  }
+  else if (subjectScore = 69 && subjectScore >=60){
+  return 'you got a D';
+  }
+  else if (subjectScore < 60) {
+  return 'you got an F';
+  }
+  }
+  grade(5)
 
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
