@@ -198,9 +198,31 @@ Use the game function below to do the following:
 
 RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors | Or there's a tie
 */
+let computer = Math.random();
 
-  function game()
-{}
+if(computer <=0.34){
+  computer = 'rock';
+
+}else if (computer <=0.67){
+  computer ='paper';
+}else if (computer >0.67){
+  computer = 'scissors';
+}  
+
+function game(user, computer){
+if (user ===computer){
+  return `it's a tie`;
+}else if (user==='rock'&& computer==='scissors'){
+  return`you win!`;
+}else if (user==='paper'&& computer ==='rock'){
+  return `you win!`;
+}else if (user==='scissors' && computer === 'paper'){
+  return`you win!`;
+}else {
+  return `you lose!`
+}
+}
+console.log('task 4', game('paper', computer));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -230,7 +252,6 @@ Using the feet function below do the following:
 
 function feet(cm){
   return cm / 30.48
-  feet()
 }
 
 
@@ -249,9 +270,13 @@ Using the annoyingSong function below do the following:
 4. Each time the annoyingSong is run from this loop, it should console.log the string that was returned. 
 */
 
-function annoyingSong(/*add your code here*/){
-      /*add your code here*/
+function annoyingSong(number){
+      for(let i=number; i>0; i--){
+        return`${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i -1} bottles of soda on the wall`;
+      }
 }
+console.log(`task 6`, annoyingSong(8));
+console.log(`task 6`, annoyingSong(9));
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -269,25 +294,25 @@ Using the grade function below do the following:
  below should return 'you got an F'
 */
 
-function grade(subjectScore){
-  if (subjectScore = 100 && subjectScore >= 90){
-  return 'you got an A';
+function grade(number)
+{
+  if (number >=90){
+    return`you got an A`;
+
+  }else if (number <89 || number >=80){
+    return `you got a B`;
+
+  }else if (number <79 && number >=70){
+    return `you got a C`;
+
+  }else if (number <69 && number >=60){
+    return `you got a D`;
+
+  }else if (number < 60){
+    return `you got an F`;
   }
-  
-  else if (subjectScore = 89 && subjectScore >=80){
-  return 'you got a B';
-  }
-  else if (subjectScore = 79 && subjectScore >=70){
-  return 'you got a C';
-  }
-  else if (subjectScore = 69 && subjectScore >=60){
-  return 'you got a D';
-  }
-  else if (subjectScore < 60) {
-  return 'you got an F';
-  }
-  }
-  grade(5)
+} 
+console.log(`task 7`, grade(65));
 
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
